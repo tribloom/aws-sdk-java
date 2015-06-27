@@ -21,12 +21,12 @@
 
   <!-- The module section in pom.xml is auto generated. No manual changes are allowed -->
   <modules>
+<!--
     <module>aws-java-sdk-support</module>
     <module>aws-java-sdk-simpledb</module>
     <module>aws-java-sdk-simpleworkflow</module>
     <module>aws-java-sdk-storagegateway</module>
     <module>aws-java-sdk-route53</module>
-    <module>aws-java-sdk-s3</module>
     <module>aws-java-sdk-importexport</module>
     <module>aws-java-sdk-sts</module>
     <module>aws-java-sdk-sqs</module>
@@ -59,7 +59,6 @@
     <module>aws-java-sdk-cloudwatchmetrics</module>
     <module>aws-java-sdk-swf-libraries</module>
     <module>aws-java-sdk-codedeploy</module>
-    <module>aws-java-sdk-kms</module>
     <module>aws-java-sdk-config</module>
     <module>aws-java-sdk-lambda</module>
     <module>aws-java-sdk-ecs</module>
@@ -71,7 +70,10 @@
     <module>aws-java-sdk-efs</module>
     <module>aws-java-sdk</module>
     <module>aws-java-sdk-osgi</module>
+-->
+    <module>aws-java-sdk-kms</module>
     <module>aws-java-sdk-core</module>
+    <module>aws-java-sdk-s3</module>
 </modules>
 
   <licenses>

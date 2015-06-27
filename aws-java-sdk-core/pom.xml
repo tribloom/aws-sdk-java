@@ -71,6 +71,35 @@
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-javadoc-plugin</artifactId>
         </plugin>
+          <plugin>
+            	<groupId>org.apache.maven.plugins</groupId>
+            	<artifactId>maven-shade-plugin</artifactId>
+            	<version>2.4</version>
+            	<configuration>
+			<shadeSourcesContent>true</shadeSourcesContent>
+			<createSourcesJar>true</createSourcesJar>
+            		<artifactSet>
+            			<includes>
+            				<include>com.amazonaws:*</include>
+            				<include>org.apache.httpcomponents:*</include>
+            			</includes>
+            		</artifactSet>
+            		<relocations>
+            			<relocation>
+            				<pattern>org.apache.http</pattern>
+            				<shadedPattern>org.shaded.http</shadedPattern>
+            			</relocation>
+            		</relocations>
+            	</configuration>
+            	<executions>
+            		<execution>
+            			<phase>package</phase>
+            			<goals>
+            				<goal>shade</goal>
+            			</goals>
+            		</execution>
+            	</executions>
+            </plugin>
       </plugins>
     </build>
 </project>
